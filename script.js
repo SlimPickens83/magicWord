@@ -6,8 +6,8 @@ program.addEventListener("click", access1);
 
 
 function access1() {
-        document.write("<button>Access Main Program</button><br><br>ACCESS DENIED<br><br>");
-        document.write('<button id="security">Access Main Security</button>');    
+        document.write('<button id="program" style="font-size: 20px; width: 300px; padding: 12px;">Access Main Program</button><br><br>ACCESS DENIED<br><br>');
+        document.write('<button id="security" style="font-size: 20px; width: 300px; padding: 12px;">Access Main Security</button>');    
     
         security.addEventListener("click", access2); 
 }
@@ -15,7 +15,7 @@ function access1() {
 function access2() {
     if (secButton) {
         document.write("<br><br>ACCESS DENIED<br><br>");
-        document.write('<button id="grid">Access Main Security Grid</button><br><br>');
+        document.write('<button id="grid" style="font-size: 20px; width: 300px; padding: 12px;">Access Main Security Grid</button><br><br>');
     
         grid.addEventListener("click", accessDenied);
     
