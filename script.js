@@ -1,32 +1,32 @@
 let program = document.getElementById("program");
-let secButton = true;
-let gridButton = true;
 
-program.addEventListener("click", access1);
+program.addEventListener("click", access1, {
+	once: true
+});
 
 
 function access1() {
         document.write('<button id="program" style="font-size: 20px; width: 300px; padding: 12px;">Access Main Program</button><br><br>ACCESS DENIED<br><br>');
         document.write('<button id="security" style="font-size: 20px; width: 300px; padding: 12px;">Access Main Security</button>');    
     
-        security.addEventListener("click", access2); 
+        security.addEventListener("click", access2, {
+		once: true
+	}); 
 }
 
 function access2() {
-    if (secButton) {
         document.write("<br><br>ACCESS DENIED<br><br>");
         document.write('<button id="grid" style="font-size: 20px; width: 300px; padding: 12px;">Access Main Security Grid</button><br><br>');
     
-        grid.addEventListener("click", accessDenied);
-    
-        secbutton = false;
-    }
+        grid.addEventListener("click", accessDenied, {
+		once: true
+	});    
+       
 }
 
 function accessDenied() {
-    if (gridButton) {
         let magicWord = "Ah ah ah, you didn't say the magic word.<br>";
-        let response = "<br>Please!! God damn it! I hate this hacker crap.";
+        let response = "<br>Please!! God dammit! I hate this hacker crap.";
         let andersonPatience = 50;
 
         for (let i = 0; i < 41; i++) {
@@ -45,6 +45,4 @@ function accessDenied() {
             andersonPatience--;
         }
 
-        gridButton = false;
-    }
 }
